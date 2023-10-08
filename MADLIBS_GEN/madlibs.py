@@ -1,5 +1,5 @@
 try:
-    with open("50tory.txt", "r") as s:
+    with open("50story.txt", "r") as s:
         o = s.read()
     o = o.split("||")
     print("Welcome to 50 short story")
