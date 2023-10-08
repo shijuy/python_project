@@ -3,7 +3,7 @@ def yourchoice():
         with open("50story.txt", "r") as s:
             o = s.read()
         o = o.split("||")
-        print('''Welcome to 50 short story
+        print('''\nWelcome to 50 short story
         \n1:The Adventure
         \n2:The Magical Forest
         \n3:The Cosmic Adventure
@@ -55,12 +55,12 @@ def yourchoice():
         \n49:The Wizard's Spellbook
         \n50:The Detective's Riddle
         ''')
-        ch = input("Enter the story no for creating a beautiful story :")
+        ch = input("Enter the story no for creating a beautiful story :\n")
         try:
             if ch.isdigit():
                 ch = int(ch)
             else:
-                print("Invalid value,try again")
+                print("Invalid value,try again\n")
             story = o[ch - 1]
             placeholders = set()
             startingword = -1
@@ -84,8 +84,8 @@ def yourchoice():
             print(a)
     except FileNotFoundError as e:
         print(e)
-        print("Opps...! Sorry to interrupt \nOnce again verify that file name was correct")
-    choice = input("Do you want to continue next story then press (y)? ")
+        print("Opps...! Sorry to interrupt \nOnce again verify that file name was correct\n")
+    choice = input("Do you want to continue next story then press (y)?\n ")
     if choice.lower() == "y":
         yourchoice()
     else:
